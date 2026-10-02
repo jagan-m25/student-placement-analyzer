@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Analysis Result</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f2f4f7;
+            padding: 40px;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: auto;
+            background: white;
+            padding: 30px;
+            border-radius: 18px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+            text-align: center;
+        }
+
+        h1 {
+            margin-bottom: 25px;
+        }
+
+        .card {
+            padding: 15px;
+            margin: 12px 0;
+            background: #f7f7f7;
+            border-radius: 10px;
+            text-align: left;
+        }
+
+        .excellent {
+            color: green;
+            font-weight: bold;
+            font-size: 22px;
+        }
+
+        .back {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 25px;
+            background: #222;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>🎓 Student Analysis Result</h1>
+
+    <div class="card">
+        <strong>Name:</strong> {{ name }}
+    </div>
+
+    <div class="card">
+        <strong>Total Score:</strong> {{ total }}
+    </div>
+
+    <div class="card">
+        <strong>Performance:</strong>
+        <span class="excellent">{{ status }}</span>
+    </div>
+
+    <div class="card">
+        <strong>Internship:</strong> {{ internship }}
+    </div>
+
+    <div class="card">
+        <strong>Projects:</strong> {{ projects }}
+    </div>
+
+    <a class="back" href="/">← Analyze Another Student</a>
+
+</div>
+
+</body>
+</html>

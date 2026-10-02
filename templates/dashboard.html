@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Dashboard</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>📊 Student Performance Dashboard</h1>
+
+        <div class="card">
+            <h2>Student Statistics</h2>
+            <p>Total Students: <strong>{{ total_students }}</strong></p>
+            <p>Average Python Score: <strong>{{ avg_python }}</strong></p>
+            <p>Average Communication: <strong>{{ avg_communication }}</strong></p>
+            <p>Students with Internship: <strong>{{ internship_students }}</strong></p>
+        </div>
+
+        <div class="card">
+            <h2>Performance Overview</h2>
+            <p>🟢 Excellent: 3 Students</p>
+            <p>🟡 Average: 4 Students</p>
+            <p>🔴 Needs Improvement: 1 Student</p>
+        </div>
+
+        <img src="{{ url_for('static', filename='python_chart.png') }}"
+             alt="Python Scores Chart"
+             style="width:100%; margin-top:20px; border-radius:10px;">
+
+        <img src="{{ url_for('static', filename='internship_chart.png') }}"
+             alt="Internship Analysis Chart"
+             style="width:100%; margin-top:20px; border-radius:10px;">
+
+        <a class="back" href="/">
+            ← Back to Home
+        </a>
+
+    </div>
+
+</body>
+</html>

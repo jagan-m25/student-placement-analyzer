@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Analysis System</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+<body>
+
+    <h1>Student Analysis System</h1>
+
+    <form action="/analyze" method="POST">
+
+        <label>Student Name:</label><br>
+        <input type="text" name="name" required><br><br>
+
+        <label>Maths Score:</label><br>
+        <input type="number" name="maths" required><br><br>
+
+        <label>Python Score:</label><br>
+        <input type="number" name="python" required><br><br>
+
+        <label>Communication Score:</label><br>
+        <input type="number" name="communication" required><br><br>
+
+        <label>Internship Completed?</label><br>
+        <select name="internship">
+        <option value="Yes">Yes</option>
+        <option value="No">No</option>
+        </select><br><br>
+
+        <label>Number of Projects:</label><br>
+        <input type="number" name="projects" required><br><br>
+
+        <button type="submit">Analyze Student</button>
+
+    </form>
+<a class="back" href="/dashboard">
+    📊 View Dashboard
+</a>
+</body>
+</html>
