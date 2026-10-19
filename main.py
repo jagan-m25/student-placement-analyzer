@@ -1,14 +1,14 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request,Response
+import pandas as pd
+import matplotlib.pyplot as plt
+
+app = Flask(__name__)
 @app.route("/robots.txt")
 def robots():
     return Response(
         "User-agent: *\nAllow: /\n",
         mimetype="text/plain"
     )
-import pandas as pd
-import matplotlib.pyplot as plt
-
-app = Flask(__name__)
 
 @app.route("/")
 def home():
