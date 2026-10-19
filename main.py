@@ -1,9 +1,11 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, send_from_directory
 import pandas as pd
 import matplotlib.pyplot as plt
 
 app = Flask(__name__)
-
+@app.route("/robots.txt")
+def robots():
+    return send_from_directory(".", "robots.txt")
 
 @app.route("/")
 def home():
