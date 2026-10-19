@@ -1,4 +1,10 @@
-from flask import Flask, render_template, request, send_from_directory
+from flask import Flask, render_template, request
+@app.route("/robots.txt")
+def robots():
+    return Response(
+        "User-agent: *\nAllow: /\n",
+        mimetype="text/plain"
+    )
 import pandas as pd
 import matplotlib.pyplot as plt
 
